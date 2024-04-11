@@ -7,13 +7,15 @@ ZEROZERO = 37
 ODDS = {
     "COLOURS": 2,
     "LOWHIGH": 2,
-    "DOZENS": 3
+    "DOZENS": 3,
+    "FIVEBET": 7
 }
 
 BETCOUNTSRANGES = {
     "COLOURS": (0,1),
     "LOWHIGH": (0,1),
     "DOZENS": (0,2),
+    "FIVEBET": (0,1),
 }
 
 COLOURS = { "RED": [9, 30, 7, 32, 5, 34, 3, 36, 1, 27, 25, 12, 19, 18, 21, 16, 22 ,14],
@@ -24,11 +26,13 @@ DOZENS = {"FIRST": [i for i in range(1,13)],
           "SECOND": [i for i in range(13, 25)],
           "THIRD": [i for i in range(25, 37)]
           }
+FIVEBET = {"WIN": [ZERO, ZEROZERO, 1, 2, 3]}
 
 BETTYPES = {
     "COLOURS": COLOURS,
     "LOWHIGH": LOWHIGH,
     "DOZENS": DOZENS,
+    "FIVEBET": FIVEBET,
 }
 
 def generateMinBets():
@@ -74,7 +78,7 @@ if __name__ == "__main__":
     start_time=  time.time()
     
     testBet = generateMinBets()
-    testBet["LOWHIGH"]["LOW"] = 10
+    testBet["FIVEBET"]["WIN"] = 10
     freq = {}
     
     for i in range(1000000):
