@@ -1,4 +1,5 @@
 import random
+import time
 
 ZERO = 0
 ZEROZERO = 37
@@ -68,3 +69,18 @@ def spin(bets):
                 returnVal += amount * ODDS[betType]
     
     return returnVal
+
+if __name__ == "__main__":
+    start_time=  time.time()
+    
+    testBet = generateMinBets()
+    testBet["LOWHIGH"]["LOW"] = 10
+    freq = {}
+    
+    for i in range(1000000):
+        retVal = spin(testBet)
+        if retVal not in freq: freq[retVal] = 0
+        freq[retVal] += 1
+
+    print("--- %s seconds ---" % (time.time() - start_time))
+    print(freq)
