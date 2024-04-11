@@ -31,11 +31,13 @@ BETTYPES = {
 }
 
 def generateMinBets():
-    return {
-        "COLOURS": {"RED": 0, "BLACK": 0},
-        "LOWHIGH": {"LOW": 0, "HIGH": 0},
-        "DOZENS": {"FIRST": 0, "SECOND": 0, "THIRD": 0}
-    }
+    minBet = {}
+    for betType in BETTYPES:
+        minBetValue = {}
+        for betPossibility in BETTYPES[betType]:
+            minBetValue[betPossibility] = 0
+        minBet[betType] = minBetValue
+    return minBet
 
 def verify_bets(bets):
     for betType in BETTYPES:
@@ -66,19 +68,3 @@ def spin(bets):
                 returnVal += amount * ODDS[betType]
     
     return returnVal
-
-testbet = generateMinBets()
-
-testbet["DOZENS"]["THIRD"] = 10
-testbet["COLOURS"]["BLACK"] = 10
-testbet["LOWHIGH"]["LOW"] = 10
-
-freq = {}
-
-for _ in range(1000000):
-    retVal = spin(testbet)
-    if retVal not in freq:
-        freq[retVal] = 0
-    freq[retVal] += 1
-
-print(freq)
