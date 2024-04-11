@@ -2,9 +2,6 @@ from bets import *
 import random
 import time
 
-
-
-
 def generateMinBets():
     minBet = {}
     for betType in BETTYPES:

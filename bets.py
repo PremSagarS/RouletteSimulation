@@ -35,9 +35,9 @@ COLOURS = { "RED": [9, 30, 7, 32, 5, 34, 3, 36, 1, 27, 25, 12, 19, 18, 21, 16, 2
 LOWHIGH = {"LOW": [i for i in range(1,19)],
            "HIGH": [i for i in range(19, 37)]}
 
-DOZENS = {"FIRST": [i for i in range(1,13)],
-          "SECOND": [i for i in range(13, 25)],
-          "THIRD": [i for i in range(25, 37)]
+DOZENS = {1: [i for i in range(1,13)],
+          2: [i for i in range(13, 25)],
+          3: [i for i in range(25, 37)]
           }
 
 EVENODD = {
