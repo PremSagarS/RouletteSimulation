@@ -48,18 +48,18 @@ EVENODD = {
 FIVEBET = {"WIN": [ZERO, ZEROZERO, 1, 2, 3]}
 
 STREET = {
-    "ONE": [i for i in range(1,4)],
-    "TWO": [i for i in range(4,7)],
-    "THREE": [i for i in range(7,10)],
-    "FOUR": [i for i in range(10,13)],
-    "FIVE": [i for i in range(13,16)],
-    "SIX": [i for i in range(16,19)],
-    "SEVEN": [i for i in range(19,22)],
-    "EIGHT": [i for i in range(22,25)],
-    "NINE": [i for i in range(25,28)],
-    "TEN": [i for i in range(28,31)],
-    "ELEVEN": [i for i in range(31,34)],
-    "TWELVE": [i for i in range(34,37)],
+    1: [i for i in range(1,4)],
+    2: [i for i in range(4,7)],
+    3: [i for i in range(7,10)],
+    4: [i for i in range(10,13)],
+    5: [i for i in range(13,16)],
+    6: [i for i in range(16,19)],
+    7: [i for i in range(19,22)],
+    8: [i for i in range(22,25)],
+    9: [i for i in range(25,28)],
+    10: [i for i in range(28,31)],
+    11: [i for i in range(31,34)],
+    12: [i for i in range(34,37)],
     }
 
 CORNER = {
