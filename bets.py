@@ -29,11 +29,11 @@ BETCOUNTSRANGES = {
     "STRAIGHTUP": (0, 35)
 }
 
-COLOURS = {0: [9, 30, 7, 32, 5, 34, 3, 36, 1, 27, 25, 12, 19, 18, 21, 16, 22, 14],
-           1: [28, 26, 11, 20, 17, 22, 15, 24, 13, 10, 29, 8, 31, 6, 33, 4, 35, 2]}
+COLOURS = {1: [9, 30, 7, 32, 5, 34, 3, 36, 1, 27, 25, 12, 19, 18, 21, 16, 22, 14],
+           2: [28, 26, 11, 20, 17, 22, 15, 24, 13, 10, 29, 8, 31, 6, 33, 4, 35, 2]}
 
-LOWHIGH = {0: [i for i in range(1, 19)],
-           1: [i for i in range(19, 37)]}
+LOWHIGH = {1: [i for i in range(1, 19)],
+           2: [i for i in range(19, 37)]}
 
 DOZENS = {1: [i for i in range(1, 13)],
           2: [i for i in range(13, 25)],
@@ -41,8 +41,8 @@ DOZENS = {1: [i for i in range(1, 13)],
           }
 
 EVENODD = {
-    0: [i for i in range(1, 37) if i % 2 == 1],
-    1: [i for i in range(2, 37) if i % 2 == 0],
+    1: [i for i in range(1, 37) if i % 2 == 1],
+    2: [i for i in range(2, 37) if i % 2 == 0],
 }
 
 FIVEBET = {0: [ZERO, ZEROZERO, 1, 2, 3]}
