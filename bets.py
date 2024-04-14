@@ -45,7 +45,7 @@ EVENODD = {
     2: [i for i in range(2, 37) if i % 2 == 0],
 }
 
-FIVEBET = {0: [ZERO, ZEROZERO, 1, 2, 3]}
+FIVEBET = {1: [ZERO, ZEROZERO, 1, 2, 3]}
 
 STREET = {
     1: [i for i in range(1, 4)],
